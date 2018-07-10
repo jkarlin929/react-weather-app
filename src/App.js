@@ -29,7 +29,7 @@ class App extends Component {
         city: data.name,
         country: data.sys.country,
         humidity: data.main.humidity,
-        description: data.weather[0].description,
+        description: data.weather[0].description.charAt(0).toUpperCase() + data.weather[0].description.slice(1),
         error: ""
       });
     } else {
